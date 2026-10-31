@@ -54,19 +54,19 @@ Every width comes from worst-case bounds for 8-bit input (see `docs/arithmetic_a
 
 ## Repository layout
 
-```
-rtl/              7 SystemVerilog modules (harris_top.sv is the top)
-tb/               tb_harris.sv (28-test integration TB, module tb_harris_top) + 6 unit TBs
-model/            harris_reference.py (bit-exact Python model), bounds.py (worst-case width analysis)
-sim/              crosscheck.py + tb_harris_dump.sv (RTL vs Python at 64x64), logs/, corners_64x64.png
-synthesis/        genus.tcl, Genus reports (area, gates, timing, QoR, power), log, netlist + SDC
-lec/              Conformal LEC script and log
-sta/              Tempus script and logs (2.25 ns and 3.8 ns runs)
-pnr/              innovus.tcl, mmmc.tcl, final reports, CTS reports, timing summaries, post-route netlist
-docs/             architecture, interface spec, arithmetic analysis, verification plan/results, images/
-report/           the submitted case study and the front-end / back-end lab reports (PDF)
-run_sim.sh        runs every simulation that does not need Cadence tools
-```
+| Path | Description |
+|---|---|
+| [`rtl/`](https://github.com/ashmitsingh7/harris-corner-detector/tree/main/rtl) | **7 SystemVerilog modules** — `harris_top.sv` is the top-level module. Click to browse: `harris_top.sv`, `sobel_grad.sv`, `window3x3.sv`, `gradient_products.sv`, `harris_response.sv`, `corner_threshold.sv`, `boxsum5x5.sv` |
+| [`tb/`](https://github.com/ashmitsingh7/harris-corner-detector/tree/main/tb) | Testbenches: `tb_harris.sv` (28-test integration TB) + 6 unit TBs (`tb_window3x3.sv`, `tb_sobel_grad.sv`, `tb_gradient_products.sv`, `tb_harris_response.sv`, `tb_corner_threshold.sv`, `tb_boxsum5x5.sv`) |
+| [`model/`](https://github.com/ashmitsingh7/harris-corner-detector/tree/main/model) | `harris_reference.py` (bit-exact Python model), `bounds.py` (worst-case width analysis) |
+| [`sim/`](https://github.com/ashmitsingh7/harris-corner-detector/tree/main/sim) | `crosscheck.py` (RTL vs Python reference at 64×64), `logs/`, `corners_64x64.png` |
+| [`synthesis/`](https://github.com/ashmitsingh7/harris-corner-detector/tree/main/synthesis) | Genus reports (`genus.tcl`, area/gates/timing/QoR/power), log, elaborated netlist + SDC |
+| [`lec/`](https://github.com/ashmitsingh7/harris-corner-detector/tree/main/lec) | Conformal LEC script and log |
+| [`sta/`](https://github.com/ashmitsingh7/harris-corner-detector/tree/main/sta) | Tempus script and logs (2.25 ns and 3.8 ns runs) |
+| [`pnr/`](https://github.com/ashmitsingh7/harris-corner-detector/tree/main/pnr) | Innovus scripts (`innovus.tcl`, `mmmc.tcl`), final reports, CTS reports, timing summaries, post-route netlist |
+| [`docs/`](https://github.com/ashmitsingh7/harris-corner-detector/tree/main/docs) | Architecture, interface spec, arithmetic analysis, verification plan/results, images |
+| [`report/`](https://github.com/ashmitsingh7/harris-corner-detector/tree/main/report) | Submitted case study and front-end / back-end lab reports (PDF) |
+| `run_sim.sh` | Runs every simulation that does not need Cadence tools |
 
 ## Running the simulations
 

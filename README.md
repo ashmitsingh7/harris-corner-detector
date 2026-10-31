@@ -24,17 +24,6 @@ Group project for **BEVD301L ASIC Design / BEVD301P ASIC Design Lab**, VIT Vello
 | Physical checks | DRC 0, connectivity 0, process antenna 0 |
 | Verification | 28-test self-checking testbench (Xcelium and Icarus), 6 unit testbenches, bit-exact match with a Python reference model |
 
-## Team
-
-| Name | Registration No. |
-|---|---|
-| Saket Sodani | 24BVD0069 |
-| Advay Gopalakrishnan | 24BVD0191 |
-| Swajit Jain | 24BVD0022 |
-| Krithik Sai | 24BVD0039 |
-| Arrnav Trisal | 24BVD0064 |
-| Ashmit Singh | 24BVD0027 |
-
 ## Architecture
 
 ![Block diagram](docs/images/block_diagram.png)
